@@ -2,6 +2,7 @@ a = 1
 print("Hello World")
 
 # random comment
+# another random comment
 
 def start():
     bar()
