@@ -1,6 +1,8 @@
 a = 1
 print("Hello World")
 
+# random comment
+
 def start():
     bar()
 
