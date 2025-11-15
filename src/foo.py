@@ -1,7 +1,7 @@
 a = 1
 print("Hello World")
 
-1_error = "Bye"
+# 1_error = "Bye"
 
 def start():
     bar()
