@@ -1,22 +1,21 @@
-a = 1
-print("Hello World")
+from dotenv import load_dotenv
+import json
 
-# 1_error = "Bye"
+CONFIG_PATH = ""
+USE_PROXY = False
+
+def load_config(path):
+  with open(path) as f:
+    config = json.load(f)
+  return config
+
+def process_config(config):
+  if config.get('load_env'):
+    load_dotenv()
+  if config.get('use_proxy'):
+    USE_PROXY = True
 
 def start():
-    bar()
-
-
-def bar():
-    return test()
-
-
-def test():
-    return bar()
-
-
-def baz():
-    return bar()
-
-
-start()
+  config = load_config(CONFIG_PATH)
+  process_config(config)
+  print('Finished processing the config file!')
